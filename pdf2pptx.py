@@ -43,7 +43,7 @@ def convert_pdf2pptx(
 
         # write slide as a pixmap
         pixmap = page.get_pixmap(matrix=matrix)
-        image_data = pixmap.tobytes(output="PNG")
+        image_data = pixmap.tobytes(output="JPG")
         image_file = io.BytesIO(image_data)
 
         # add a slide
@@ -70,7 +70,7 @@ def main():
     """
 
     # Get current working directory
-    RESOLUTION: int = 100  # image resolution
+    RESOLUTION: int = 300  # image resolution
     PAGE_COUNT = None  # number of pages to convert, None defaults to all slides
     START_PAGE: int = 0  # start page for conversion
 
